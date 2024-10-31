@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      body {
+        background-color: #43754775;
+        padding: 30px;
+      }
+      h1 {
+        font-size: 50px;
+        color: red;
+      }
+      .button {
+        background-color: black;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 30px;
+        border-radius: 50px;
+      }
+      .button:hover {
+        background-color: white;
+        color: black;
+        padding: 30px 80px;
+        font-size: 18px;
+        transition: all 0.3s ease-out;
+      }
+  </style>
+</head>
+<body>
+  <h1 class="title">테스트1</h1>
+  <h1 class="title">테스트1</h1>
+  <h1 class="title">테스트1</h1>
+  <button class="button">버튼</button>
+</body>
+<script>
+  const pageTitles = document.querySelectorAll('.title'); 
+  const button = document.querySelector('.button');
+
+  button.addEventListener('click', () => {
+    pageTitles.forEach((item, index) => {
+      item.innerText = 'aaa ' + index
+    });
+  });
+
+  // pageTitles[0].style.color = 'yellow';
+  // pageTitles[0].style.fontSize = '40px';
+  // pageTitles[0].style.display = 'block';
+
+  // button.addEventListener('click', () => {
+  //   if (pageTitles[0].style.display == 'block') {
+  //     pageTitles[0].style.display = 'none';
+  //   } else {
+  //     pageTitles[0].style.display = 'block';
+  //   }
+  // });
+</script>
+</html>

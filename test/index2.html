@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      body {
+        background-color: #43754775;
+        padding: 30px;
+      }
+      h1 {
+        font-size: 50px;
+        color: red;
+      }
+      .button {
+        background-color: black;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 30px;
+        border-radius: 50px;
+      }
+      .button:hover {
+        background-color: white;
+        color: black;
+        padding: 30px 80px;
+        font-size: 18px;
+        transition: all 0.3s ease-out;
+      }
+  </style>
+</head>
+<body>
+  <h1 class="value">0</h1>
+  <button class="plusNumber">+</button>
+  <button class="minusNumber">-</button>
+</body>
+<script>
+  let num = 0;
+  const numberValue = document.querySelector('.value');
+  const plusNumber = document.querySelector('.plusNumber');
+  const minusNumber = document.querySelector('.minusNumber');
+
+  plusNumber.addEventListener('click', () => {  
+    numberValue.innerText = ++num;
+  });
+  minusNumber.addEventListener('click', () => {
+    numberValue.innerText = --num;
+  });
+
+</script>
+</html>aasd
